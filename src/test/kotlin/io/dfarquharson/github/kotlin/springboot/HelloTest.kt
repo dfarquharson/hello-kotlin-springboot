@@ -7,8 +7,12 @@ class CalculatorTest {
 
     @Test
     fun `1 + 1 = 2`() {
-        val calculator = Calculator()
-        assertThat(calculator.add(1, 1)).isEqualTo(2)
+        assertThat(Calculator().add(1, 1)).isEqualTo(2)
+    }
+
+    @Test
+    fun addDefault() {
+        assertThat(Calculator().add(1)).isEqualTo(2)
     }
 
 }
