@@ -57,3 +57,5 @@ tasks.withType<Test> {
         events("passed", "skipped", "failed")
     }
 }
+
+// TODO: make a jacocoReport task that depends on the test task
