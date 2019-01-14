@@ -1,5 +1,7 @@
 package io.dfarquharson.github.kotlin.springboot
 
+import io.dfarquharson.github.kotlin.springboot.classic.Greeting
+import io.dfarquharson.github.kotlin.springboot.classic.GreetingController
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

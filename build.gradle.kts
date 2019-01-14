@@ -58,4 +58,22 @@ tasks.withType<Test> {
     }
 }
 
-// TODO: make a jacocoReport task that depends on the test task
+tasks {
+    jacocoTestCoverageVerification {
+        violationRules {
+            rule {
+                limit {
+                    //                    minimum = BigDecimal.valueOf(1.0)
+                    minimum = BigDecimal.valueOf(0.5)
+                }
+                excludes = listOf(
+                    "io.dfarquharson.github.kotlin.springboot.classic.Application"
+                )
+            }
+        }
+    }
+    check {
+        dependsOn(jacocoTestCoverageVerification)
+        dependsOn(jacocoTestReport)
+    }
+}
